@@ -1,0 +1,26 @@
+procedure Poner_ADistancia3Al_(color, dirección){
+    /*
+    Propósito : Agregar una bolita de color "color" a distancia 3 celdas en dirección "dirección" dada.
+    Precondición:
+     -debe haber almenos 3 celdas en la dirección "dirección" dada desde la posición actual del cabezal.
+    Paramétros:
+     -color es el color de la bolita que deseamos agregar en la celda actual.
+     -dirección es la direccion en la cual queremos movernos
+    */
+    Mover_3Veces(dirección)
+    Poner(color)
+}
+
+procedure Mover_3Veces(direcciónAMover){
+    /*
+    Propósito: Mover el cabezal 3 veces en la dirección $direcciónAMover dada
+    Precondición:
+     -debe haber almenos 3 celdas en la dirección $direcciónAMover dada
+    Paramétros:
+     -direcciónAMover es la dirección en la cual el procedimiento se moverá
+    */
+    repeat (3){
+        Mover(direcciónAMover)
+    }
+}
+B)ninguna. Como son procedimientos diferentes lo único que tienen en comun es el tipo de Argumento que reciben.

@@ -1,0 +1,55 @@
+procedure DibujarRelojAnalógicoSimplificadoDeRadio_(radio){
+    /*
+    Propósito : Dibujar Un Reloj analogico de radio $radio con bolitas Rojas. 
+               Con centro en la celda actual.
+    Precondición:
+     -debe haber almenos $radio cantidad de celdas al Este, de la posición actual del cabezal
+     -debe haber almenos $radio cantidad de celdas al Norte, de la posición actual del cabezal
+     -debe haber almenos $radio cantidad de celdas al Oeste, de la posición actual del cabezal
+     -debe haber almenos $radio cantidad de celdas al Sur, de la posición actual del cabezal
+    Parametros:
+     - radio, es el radio de nuestro reloj.
+    */
+    ColocarElCabezal_CeldasEndirección_(radio, Norte)
+    AgregarElNumero_EnElRelojDeColor_(12, Rojo)
+    ColocarElCabezal_CeldasEndirección_(radio, Sur)  //volver al centro
+    
+    ColocarElCabezal_CeldasEndirección_(radio, Este)
+    AgregarElNumero_EnElRelojDeColor_(3, Rojo)
+    ColocarElCabezal_CeldasEndirección_(radio, Oeste) //volver al centro
+    
+    ColocarElCabezal_CeldasEndirección_(radio, Sur)
+    AgregarElNumero_EnElRelojDeColor_(6, Rojo)
+    ColocarElCabezal_CeldasEndirección_(radio, Norte) //volver al centro
+    
+    ColocarElCabezal_CeldasEndirección_(radio, Oeste)
+    AgregarElNumero_EnElRelojDeColor_(9, Rojo)
+    ColocarElCabezal_CeldasEndirección_(radio, Este) //regresar el cabezal al centro (fin)
+    
+}
+
+procedure ColocarElCabezal_CeldasEndirección_(cantidadDeCeldasAMoverse, direccionAMover){
+    /*
+    Propósito: Mover el cabezal $cantidadDeCeldasAMoverse celdas en la dirección $direccionAMover dada
+    Precondición:
+     debe haber almenos la cantidad $cantidadDeCeldasAMoverse de celdas en la dirección $direccionAMover dada.
+    Paramétros:
+     -direccionAMover es la direccion en la cual se moverá el cabezal
+     -cantidadDeCeldasAMoverse es la cantidad de celdas a moverse 
+    */
+    repeat (cantidadDeCeldasAMoverse){
+        Mover(direccionAMover)
+    }
+}
+procedure AgregarElNumero_EnElRelojDeColor_(númeroDelReloj, colorDelNúmero){
+	/*
+	Propósito: Agregar el número $númeroDelReloj de color $colorDelNúmero dado en elreloj.
+	Precondición: ninguna
+	Paramétro: 
+	 -númeroDelReloj es el número del reloj que deceamos colocar
+	 -colorDelNúmero es el color del número que deceamos que se muestre en el reloj.
+	*/
+	repeat(númeroDelReloj){
+	    Poner(colorDelNúmero)
+	}
+}

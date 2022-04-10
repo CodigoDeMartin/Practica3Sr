@@ -1,0 +1,162 @@
+procedure DibujarELNombreMartinConBolitasAzules(){
+	/*
+	Propósito: Agregar el nombre Martin con bolitas de color Azul dejando una celda 
+	           de espacio entre letra y letra.
+	Paramétro:ninguno
+
+	Precondición: 
+	 >debe haber almemos 20 celdas al Este de la posición actual del cabezal.
+	 >debe haber almenos 2 celdas al Norte de la posición actual del cabezal
+	*/
+	DibujarLetraMDeColorAzul()
+	PasarALaSiguienteLetra()
+	DibujarLetraADeColorAzul()
+	PasarALaSiguienteLetra()
+	DibujarLetraRDeColorAzul()
+	PasarALaSiguienteLetra()
+	DibujarLetraTDeColorAzul()
+	PasarALaSiguienteLetra()
+	DibujarLetraIDeColorAzul()
+	PasarALaLetraN()
+	DibujarLetraNDecolorAzul()
+	RegresarElCabezalAlInicio()
+}
+
+procedure PasarALaSiguienteLetra(){
+	/*
+	Propósito: Pasar a la siguiente letra.
+	Paramétro:ninguna
+	Precondición:
+	 -debe haber almenos 1 celdas al Este de la posición actual del cabezal
+	*/
+	Mover__Veces(Este, 4)
+}
+
+procedure RegresarElCabezalAlInicio(){
+	/*
+	Propósito: Pasar a la siguiente letra.
+	Paramétro:ninguna
+	Precondición:
+	 -debe haber almenos 20 celdas al Oeste de la posición actual del cabezal
+	*/
+	Mover__Veces(Oeste, 20)
+}
+
+procedure PasarALaLetraN(){
+	/*
+	Propósito: Pasar a la letra N.
+	Paramétro:ninguna
+	Precondición:
+	 -debe haber almenos 2 celdas al Este de la posición actual del cabezal
+	*/
+	Mover__Veces(Este, 2)
+}
+
+
+
+procedure DibujarLetraMDeColorAzul(){
+	/*
+	Propósito: Agregar la letra M de color azul.
+	Paramétro:
+	Precondición:
+	 -debe haber almenos 2 celdas Al este de la posicion actual del cabezal.
+	 -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
+	*/
+	DibujarLíneaHacia_DeLargo_ (Norte, 3)
+	Mover__Veces(Este, 1)
+	Mover__Veces(Norte, 1)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Sur, 1)
+	Mover__Veces(Este, 1)
+	DibujarLíneaHacia_DeLargo_ (Norte, 3)
+	Mover__Veces(Oeste, 2)
+} 
+
+procedure DibujarLetraADeColorAzul(){
+	/*
+	Propósito: Dibujar la letra A de color Azul.
+	Paramétro:
+	Precondición:
+	  -debe haber almenos 2 celdas Al este de la posicion actual del cabezal.
+	  -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
+	*/
+	DibujarLíneaHacia_DeLargo_ (Norte, 2)
+	Mover__Veces(Este, 1)
+	Mover__Veces(Norte, 1)
+	DibujarLíneaHacia_DeLargo_ (Norte, 2)
+	Mover__Veces(Sur, 1)
+	Mover__Veces(Este, 1)
+	DibujarLíneaHacia_DeLargo_ (Norte, 2)
+	Mover__Veces(Oeste, 2)
+}
+
+procedure DibujarLetraRDeColorAzul(){
+	/* 
+	Propósito: Dibujar la letra R de color Azul.
+	Paramétro:
+	Precondición:
+	  -debe haber almenos 2 celdas Al este de la posicion actual del cabezal.
+	  -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
+	*/
+	DibujarLíneaHacia_DeLargo_ (Norte, 3)
+	Mover__Veces(Este, 1)
+	Mover__Veces(Norte, 1)
+	DibujarLíneaHacia_DeLargo_ (Norte, 2)
+	Mover__Veces(Sur, 1)
+	Mover__Veces(Este, 1)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Norte,2)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Sur, 2)
+	Mover__Veces(Oeste, 2) //regresar
+}
+
+procedure DibujarLetraTDeColorAzul(){
+	/*
+	Propósito: Dibujar la letra T de color Azul.
+	Paramétro:
+	Precondición:
+	 -debe haber almenos 2 celdas Al este de la posicion actual del cabezal.
+	 -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
+	*/
+	Mover__Veces(Norte,2)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Sur, 2)
+	Mover__Veces(Este, 1)
+	DibujarLíneaHacia_DeLargo_ (Norte, 3)
+	Mover__Veces(Este, 1)
+	Mover__Veces(Norte,2)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Oeste, 2) //regresar
+}
+
+procedure DibujarLetraIDeColorAzul(){
+	/*
+	Propósito: Dibujar la letra I de color Azul.
+	Paramétro:
+	Precondición: 
+	 -debe haber almenos 2 celdas Al este de la posicion actual del cabezal.
+	 -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
+	*/
+	DibujarLíneaHacia_DeLargo_ (Norte, 3)
+}
+
+procedure DibujarLetraNDecolorAzul(){
+	/*
+	Propósito:Dibujar la letra N de color Azul.
+	Paramétro:
+	Precondición:
+	  -debe haber almenos 2 celdas Al este de la posicion actual del cabezal.
+	  -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
+	*/
+	DibujarLíneaHacia_DeLargo_ (Norte, 3)
+	Mover__Veces(Este, 1)
+	Mover__Veces(Norte, 1)
+	Mover__Veces(Sur, 2)
+	Mover__Veces(Este, 1)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Norte,2)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Sur, 2)
+	Mover__Veces(Oeste, 2) //regresar
+}

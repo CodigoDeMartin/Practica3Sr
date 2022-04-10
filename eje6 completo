@@ -1,0 +1,35 @@
+procedure Pintar3PuntosAzules(){
+	/*
+	Propósito: Agregar 3 puntos azules con una distancia de 3 celdas entre si.
+	Parametros:ninguno
+	Precondición:
+	 -debe haber almenos 6 celdas al este de la posición actual del cabezal.
+	*/
+
+	Poner(Azul)
+	Poner_ADistancia3Al_(Azul, Este)
+	Poner_ADistancia3Al_(Azul, Este)
+	Mover_3Veces(Oeste) Mover_3Veces(Oeste)
+}
+
+
+b) Si. hay una relación entre Poner_ADistancia3Al_ y Mover_3Veces porque 
+Poner_ADistancia3Al_ involucra al comando Mover_3Veces dentro de su definición.
+
+
+c)
+procedure  Pintar3Puntos_(colorPunto){
+	/*
+	Propósito: Pintar 3 puntos de color "colorPunto" dado con una distancia entre si de 3 celdas.
+	Parametro:
+	 -colorPunto es el color de las bolitas que deseamos colocar en la celda
+	Precondición:
+	 -debe haber almenos 6 celdas al este de la posción actual del cabezal.
+	*/
+	Poner(colorPunto)
+	Poner_ADistancia3Al_(colorPunto, Este)
+	Poner_ADistancia3Al_(colorPunto, Este)
+
+	Mover_3Veces(Oeste)// regresar el cabezal al inicio.
+	Mover_3Veces(Oeste)
+}

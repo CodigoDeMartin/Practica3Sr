@@ -1,0 +1,42 @@
+procedure Mover__Veces(dirección, cantidad){
+    /*
+    Propósito:Mover "cantidad" de veces en la dirección "dirección" dada
+    Paramétros:
+     -dirección es la direccion a la cual se moverá el cabezal
+     -cantidad es la cantidad de celdas que recorrerá en la dirección dada
+    Precondición:
+     -debe haber almenos "cantidad" de celdas en la dirección "dirección" dada
+    */
+    repeat(cantidad){
+        Mover(dirección)
+    }
+}
+
+b) No es posible realizar este procedimiento de otra manera 
+porque no conocemos otras herramientas del lenguaje que puedan ayudarnos.
+
+procedure Poner__Veces(color, cantidad){
+    /*
+    Propósito: Poner "cantidad" de veces el color "color" dado
+    Paramétros:
+     -cantidad es la cantidad de bolitas que pondremos en la celda
+     -color es el color de bolita que pondrá el cabezal
+    Precondición:ninguna, función total
+    */
+    repeat(cantidad){
+        Poner(color)
+    }
+}
+procedure Sacar__Veces(color, cantidad){
+    /*
+    Propósito: Sacar "cantidad" de veces el color "color" dado
+    Paramétros:
+     -color es el color que deceamos sacar de la celda actual
+     -cantidad es la cantidad de bolitas que sacaremos del color especificado
+    Precondición:
+      -debe haber almenos la cantidad "cantidad" de bolitas del color "color".
+    */
+    repeat(cantidad){
+        Sacar(color)
+    }
+}

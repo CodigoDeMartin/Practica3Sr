@@ -1,0 +1,65 @@
+program{
+    EscribirFecha___(24, 3, 1976)
+}
+
+procedure EscribirFecha___(día, mes, año){
+    /*
+    Propósito: Escribir una fecha del año. Con bolitas de color rojo,verde y 
+     azul. Azul para el dia, Rojo para el mes y verde para el Año
+    Precondición: 
+     -debe haber almenos 2 celdas al este de la posición actual del cabezal.
+    Paramétros:
+     -dia es el número del dia, es la cantidad de bolitas que representará el dia.
+     -mes es el número del mes, es la cantidad de bolitas rojas que representará el mes
+     -año es el número del año, es la cantidad de bolitas verdes que representará el año.
+    */
+    ColocarElDia_DelAñoConBolitasDeColor_(día,Azul)
+    Mover(Este)
+    ColocarElMes_DelAñoConBolitasDeColor_(mes,Rojo)
+    Mover(Este)
+    ColocarElAño_DeLaFechaConBolitasDeColor_(año, Verde)
+    Mover(Oeste) //regresar el cabezal
+    Mover(Oeste)
+}
+
+procedure ColocarElDia_DelAñoConBolitasDeColor_(diaDelAño,colorDelDia){
+    /*
+    Propósito: Colocar el dia "diaDelAño" del año con bolitas de color "colorDelDia" dado
+    Precondición:ninguna
+    Paramétros: 
+     diaDelAño es el número de bolitas de color "colorDelDia" que queremos colocar,
+      y representa el dia.
+     colorDelDia es el color de la bolitas que queremos colocar.
+    */
+    repeat(diaDelAño){
+        Poner(colorDelDia)
+    }
+}
+
+procedure ColocarElMes_DelAñoConBolitasDeColor_(mesDelAño,colorDelMes){
+    /*
+    Propósito: Colocar el mes "mesDelAño" del año con bolitas de color "colorDelMes" dado
+    Precondición:ninguna
+    Paramétros: 
+     mesDelAño es el número de bolitas de color "colorDelMes" que queremos colocar,
+      y representa el dia.
+     colorDelMes es el color de la bolitas que queremos colocar.
+    */
+    repeat (mesDelAño){
+        Poner(colorDelMes)
+    }
+}
+
+procedure ColocarElAño_DeLaFechaConBolitasDeColor_(añoDeLaFecha, colorDelAño){
+    /*
+    Propósito: Colocar el año "añoDeLafecha"  con bolitas de color "colorDelAño" dado
+    Precondición:ninguna
+    Paramétros: 
+     añoDeLafecha es el número de bolitas de color "colorDelAño" que queremos colocar,
+      y representa el dia.
+     colorDelAño es el color de la bolitas que queremos colocar.
+    */
+    repeat(añoDeLaFecha){
+        Poner(colorDelAño)
+    }
+}

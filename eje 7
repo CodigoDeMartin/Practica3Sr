@@ -1,0 +1,43 @@
+procedure PintarArcoIris(){
+	/*
+	Propósito: Pintar un arcoiris. 
+	Precondición: 
+	 -debe haber almenos 8 celdas al este de la posición actual del cabezal
+	 -debe haber almenos 1 celda al norte de la posición actual del cabezal
+	Parametro:ninguno
+	*/
+	Pintar3Puntos_YMoverElCabezalAlEste(Negro)
+	Pintar3Puntos_YMoverElCabezalAlEste(Azul)
+	Pintar3Puntos_YMoverAlNorOeste(Rojo)
+	Pintar3Puntos_(Verde)
+
+	Mover(Oeste) //regresar el cabezal al incio 
+	Mover(Sur)
+}
+
+procedure Pintar3Puntos_YMoverElCabezalAlEste(colorDelPunto){
+	/*
+	Propósito: Pintar 3 puntos de color "colorDelPunto" dado con una distancia entre si de 3 celdas
+	Paramétro:
+	 -colorDelPunto es el color de los puntos que queremos agregar
+	Precondición: 
+	  -debe haber almenos 6 celdas al este de la posición actual del cabezal.
+	*/
+	Pintar3Puntos_(colorDelPunto)
+	Mover(Este)
+}
+
+procedure Pintar3Puntos_YMoverAlNorOeste(colorDelPunto){
+	/*
+	Propósito: Pintar 3 puntos de color "colorDelPunto" dado con una distancia entre si de 3 celdas 
+	               y mover el cabezal al Noroeste de la posicion actual del cabezal.
+	Paramétro:
+	 -colorDelPunto es el color de los puntos que queremos agregar
+	Precondición: 
+	  -debe haber almenos 6 celdas al este de la posición actual del cabezal.
+	  -debe haber almenos 1 celda al Norte de la posición actual del cabezal.
+	*/
+	Pintar3Puntos_(colorDelPunto)
+	Mover(Oeste)
+	Mover(Norte)
+	}

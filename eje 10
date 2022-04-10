@@ -1,0 +1,42 @@
+procedure DibujarUnCuadradoDeLado2DeColor_(colorDelCuadrado) {
+	/* 
+	PROPÓSITO: Dibujar un cuadrado de 2x2 de color	**colorDelCuadrado**
+
+	PRECONDICIONES:
+	* Hay al menos 1 celda al Norte y 1 al Este de la actual
+
+	PARÁMETROS:
+	* colorDelCuadrado: el color con el que se dibuja el cuadrado
+
+	*/
+	DibujarLineaDeLado2DeColor_(colorDelCuadrado)
+	PosicionarseParaSiguienteLínea()
+	DibujarLineaDeLado2DeColor_(colorDelCuadrado)
+	Mover(Sur) //regresar el cabezal
+}
+
+procedure DibujarLineaDeLado2DeColor_(colorDelaLineaDeLargo2){
+	/*
+	Propósito: Dibujar una linea de lado 2 de color "colorDelaLineaDeLargo2" dada
+	Paramétro:
+	 -colorDelaLineaDeLargo2 es el color de la linea que deceamos colocar
+	Precondición:
+	 > debe haber almenos 1 celda al Este de la posición actual del cabezal
+	*/
+	DibujarLíneaHacia_DeLargo_DeColor_(Este, 2, colorDelaLineaDeLargo2)
+}
+
+procedure DibujarLíneaHacia_DeLargo_DeColor_(direcciónDeLaLinea, largoDeLaLinea, colorDeLaLinea){
+	/*
+	Propósito: Agregar una linea De largo "largoDeLaLinea" en la dirección "direcciónDeLaLinea" de color "colorDeLaLinea" dado
+	Paramétro:
+	  tiene los mismos parametros que la definida en el eje 9 solo se agrega colorDeLaLinea que es 
+	   el color de nuestra linea.
+	Precondición: las mismas que la del eje 9
+	*/
+	repeat(largoDeLaLinea){
+	 Poner__Veces(colorDeLaLinea, 1)
+	 Mover__Veces(direcciónDeLaLinea, 1)
+	}
+	Mover__Veces(opuesto(direcciónDeLaLinea), largoDeLaLinea )
+}

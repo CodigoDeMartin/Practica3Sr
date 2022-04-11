@@ -120,14 +120,13 @@ procedure DibujarLetraTDeColorAzul(){
 	 -debe haber almenos 2 celdas al Norte de la posición actual del cabezal.
 	*/
 	Mover__Veces(Norte,2)
-	Poner__Veces(Azul, 1)
-	Mover__Veces(Sur, 2)
+	DibujarLíneaHacia_DeLargo_ (Este, 3)
 	Mover__Veces(Este, 1)
-	DibujarLíneaHacia_DeLargo_ (Norte, 3)
-	Mover__Veces(Este, 1)
-	Mover__Veces(Norte,2)
+	Mover__Veces(Sur, 1)
 	Poner__Veces(Azul, 1)
-	Mover__Veces(Oeste, 2) //regresar
+	Mover__Veces(Sur, 1)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Oeste, 1) //regresar
 }
 
 procedure DibujarLetraIDeColorAzul(){
@@ -152,7 +151,8 @@ procedure DibujarLetraNDecolorAzul(){
 	DibujarLíneaHacia_DeLargo_ (Norte, 3)
 	Mover__Veces(Este, 1)
 	Mover__Veces(Norte, 1)
-	Mover__Veces(Sur, 2)
+	Poner__Veces(Azul, 1)
+	Mover__Veces(Sur, 1)
 	Mover__Veces(Este, 1)
 	Poner__Veces(Azul, 1)
 	Mover__Veces(Norte,2)
